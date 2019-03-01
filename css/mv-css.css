@@ -370,6 +370,9 @@ footer p {
 }
 /*右边部分的盒子*/
 @media (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
   .mv-main .mv-main-fr {
     width: 100%;
   }
