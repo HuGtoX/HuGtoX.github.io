@@ -1,0 +1,132 @@
+
+.banner{
+	@imgWidth:730px; 		/*轮播盒子宽度*/
+	@imgHeight:336px;		/*轮播盒子高度*/
+	background-color: #ccc;
+	transition: background-color 2s;
+	width: 100%;
+	
+	/*居中的轮播盒子*/
+	.banner-slider{
+		width:730px;
+		height: 336px;
+		margin:0 auto;
+		position: relative;
+		overflow: hidden;
+
+		/*统一轮播图片大小*/
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		/*轮播图片组*/
+		.slider-main{
+			width: 200%;
+			height: 100%;
+
+			.slider-main-img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		
+		
+		.slider-ctrl{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding:5px 0;
+			text-align: center;
+			
+			
+			.slider-ctrl-con{
+				display: inline-block;
+				width: 24px;
+			    height: 20px;
+			    display:inline-block;
+			    background:url(../img/icon.png) no-repeat -24px -782px;
+			    margin: 0 5px;
+			    cursor: pointer;
+			    text-indent: -20em;
+			    overflow: hidden;
+			    
+			} 
+			.current{
+			background-position: -24px -762px;
+			}
+			.slider-ctrl-prev,
+			.slider-ctrl-next {
+			    position: absolute;
+			    top: -@imgHeight/2;
+			    background:url(../img/icon.png) no-repeat 6px top;
+			    width: 30px;
+			    height: 35px;
+			    opacity: 0.7;
+			    cursor: pointer;
+			}
+			.slider-ctrl-prev{
+				left: 0;
+			}
+			.slider-ctrl-next{
+				right: 0;
+				background-position: -6px -44px;
+			}
+	}
+
+	}
+	
+	
+}
+@media (max-width:600px){
+	.navbar-default{
+		width: 100%;
+	}
+	.banner{
+		.banner-slider{
+			width: 100%;
+			height: 180px;
+			.slider-ctrl{
+				.slider-ctrl-prev,
+				.slider-ctrl-next {  
+				    top: -90px;
+				}
+			}
+			
+		}
+	}
+	
+}
+ul{
+	li{
+		list-style-type: none;
+	}
+}
+
+section{
+	width: 100%;
+	padding-top: 30px;
+	.section-head{
+		width: 70%;
+		margin:0 auto;
+	}
+	.section-tj{
+		width: 100%;
+	}
+	&:nth-child(even){
+		background:#FFFFF3;
+	}
+	h2{
+		text-align: center;
+		margin: 20px 0;
+		font-family: '微软雅黑';
+	}
+}
+
