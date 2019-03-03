@@ -133,13 +133,14 @@ $(function(){
 			vPlay();
 		}
 
+		//拖动视频进度条按钮事件
 		dot.onmousedown = function(e){
-				
 			playBarScroll(this,progress_out,'row',video);
 		
 		}
+		//拖动视频音量调按钮事件
 		volume_dot.onmousedown = function(e){
-			playBarScroll(this,volume_out,'column',video);
+			playBarScroll(this,volume_out,'column',video,'colume');
 				
 		}
 

@@ -4,7 +4,7 @@
 // 	return document.querySelectorAll(s);
 // }
 //滚动条横向移动
-function playBarScroll(obj,target,dr,media){
+function playBarScroll(obj,target,dr,media,type){
 			window.m = 1;
 			if(dr == 'row'){
 				var flag = 1;
@@ -47,7 +47,7 @@ function playBarScroll(obj,target,dr,media){
 				window.getSelection ? window.getSelection().removeAllRanges():document.selection.empty();
 				document.onmouseup = function(){
 					if(media){
-						if(flag)
+						if(!type)
 							media.currentTime = target.offsetWidth/size * media.duration;
 						else
 							media.volume = (target.offsetHeight/size).toFixed(1);

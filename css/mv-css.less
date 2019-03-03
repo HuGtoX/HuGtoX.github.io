@@ -27,7 +27,7 @@ section{
 		width: 100%;
 	}
 	&:nth-child(even){
-		background:#FFFFF3;
+		background:rgba(255,229,229,0.29);
 	}
 	h2{
 		text-align: center;
@@ -368,12 +368,54 @@ footer{
 		text-align: center;
 	}
 }
-		
-	
-/*右边部分的盒子*/
-	
 
-@media (max-width: 600px){
+
+
+/*右边部分的盒子*/
+@media(max-width: 1080px){
+	.navbar-form{
+		display: none;
+	}
+}	
+@media(max-width: 1000px){
+	.navbar-default{
+		width: 100%;
+	}
+	
+	.banner{
+		.banner-slider{
+			width: 80%;	
+		}
+	}
+	.row > div:nth-child(3){
+		display: none;
+	}
+	.navbar-default{
+		width: 100%;
+	}
+	.mv-main{
+		.mv-main-fr{
+			width: 100%;
+		}
+		width: 100%;
+		.mv-main-fll{
+			margin-right: 0;
+			.mv-group{
+				margin-right: 0;
+				.mv-group-pd{ 
+					width: 700px;
+					margin: 0 auto;
+					.mv{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 760px){
 	.container{
 		padding: 0;
 	}
@@ -390,7 +432,7 @@ footer{
 			.mv-group{
 				margin-right: 0;
 				.mv-group-pd{ 
-					padding: 10px 0;
+					padding: 10px 10px;
 					.mv{
 						width: 100%;
 						height: 260px;
@@ -398,5 +440,29 @@ footer{
 				}
 			}
 		}
+	}
+}
+
+@media (max-width:600px){
+	.banner{
+		.banner-slider{
+			width: 100%;
+			height: 20px;
+			.slider-ctrl{
+				.slider-ctrl-prev,
+				.slider-ctrl-next {  
+				    top: -90px;
+				}
+			}
+			
+		}
+	}
+	
+}
+
+.section-tj .row .thumbnail{
+	box-shadow: 5px 5px 10px #ccc;
+	&:hover{
+		box-shadow: 2px 2px 10px #ccc inset;
 	}
 }

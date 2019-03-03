@@ -36,10 +36,13 @@ header{
 	display: block;
 }
 .navbar-default{
-	width: 1124px;
+	max-width: 1124px;
 	margin:0 auto;
 }
 
+.nav-box{
+	/*overflow: hidden;*/
+}
 .navbar-header img{
 	height: 50px;
 }

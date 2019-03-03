@@ -72,19 +72,6 @@
   right: 0;
   background-position: -6px -44px;
 }
-@media (max-width: 600px) {
-  .navbar-default {
-    width: 100%;
-  }
-  .banner .banner-slider {
-    width: 100%;
-    height: 180px;
-  }
-  .banner .banner-slider .slider-ctrl .slider-ctrl-prev,
-  .banner .banner-slider .slider-ctrl .slider-ctrl-next {
-    top: -90px;
-  }
-}
 ul li {
   list-style-type: none;
 }
