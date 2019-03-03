@@ -433,7 +433,7 @@ footer p {
 @media (max-width: 600px) {
   .banner .banner-slider {
     width: 100%;
-    height: 20px;
+    height: 180px;
   }
   .banner .banner-slider .slider-ctrl .slider-ctrl-prev,
   .banner .banner-slider .slider-ctrl .slider-ctrl-next {
