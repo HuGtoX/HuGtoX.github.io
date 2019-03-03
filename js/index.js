@@ -1,13 +1,13 @@
 $(function(){
 	var dot = $(".dot")[0]; //进度条按钮
-	var volume_dot = $(".dot")[1]
+	var volume_dot = $(".dot")[1]  //音量控制按钮
 	var progress_out = $(".progress-out")[0]; //已播放进度条
-	var volume_out = $(".volume-out")[0];
-	var control_play = $(".control-play a")[0];
+	var volume_out = $(".volume-out")[0];	//当前音量
+	var control_play = $(".control-play a")[0];	//视频控制栏
 	var video = $(".media")[0];				// 视频对象
 	var progress = $(".progress")[0];		// 进度条
 	var volume_progress = $(".volume-progress")[0];
-	window.m = 0;
+	window.m = 0;	//全局属性
 	var play_big = $(".play-big")[0];		// 暂停页面
 	var play = $(".player")[0];				// 视频页面
 	var mv = $(".mv")[0];
@@ -98,12 +98,12 @@ $(function(){
 			
 	}
 	
+	//当点击视频播放器外部时，键盘监听失效
 	document.onclick = function(){
 		window.onkeydown = null;
 	}
 	//当文件就绪可以开始播放时运行的脚本（缓冲已足够开始时）。
 	video.oncanplay = function(){
-		console.log($(".volume-main").height());
 		volume_out.style.height = video.volume * $(".volume-main").height() + 'px';
 		play.onclick = function(event){
 			vPlay();
@@ -147,8 +147,8 @@ $(function(){
 		// 点击进度条
 		progress.onclick = function(){
 
-			var nodeLeft = nodeOffset(this);
-			var x = event.clientX - nodeLeft;
+			var nodeLeft = nodeOffset(this);	//获取当前元素距离页面最左边的距离
+			var x = event.clientX - nodeLeft;	//获取当前元素内部X的坐标
 			var w = $(this).width();
 			window.per = (x/w).toFixed(3);
 			var duration = video.duration;

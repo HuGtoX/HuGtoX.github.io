@@ -1,5 +1,5 @@
 $(function(){
-	var slider_main = document.querySelectorAll(".slider-main")[0]; //滚动图片的父盒子
+var slider_main = document.querySelectorAll(".slider-main")[0]; //滚动图片的父盒子
 var banner_slider = document.querySelectorAll(".banner-slider")[0]; //轮播的最大盒子
 var slider_img = document.querySelectorAll(".slider-main-img"); //滚动的图片集合
 var slider_ctrl = document.querySelectorAll(".slider-ctrl")[0]; //控制滚动的按钮组
